@@ -1,6 +1,6 @@
 package iam.rizel.prism.event;
 
-public class SayEvent implements ServerEvent {
+public class SayEventImpl implements SayEvent {
 
     private String message;
 
@@ -9,7 +9,13 @@ public class SayEvent implements ServerEvent {
         return ServerEventType.SAY;
     }
 
+    @Override
     public void setMessage(String message) {
         this.message = message;
+    }
+    
+    @Override
+    public String getMessage() {
+    	return message;
     }
 }

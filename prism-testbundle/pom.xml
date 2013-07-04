@@ -32,7 +32,7 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>iam.rizel.prism.test</Bundle-SymbolicName>
-                        <Bundle-Activator>iam.rizel.prism.Activator</Bundle-Activator>
+                        <Bundle-Activator>iam.rizel.prism.bundle.test.Activator</Bundle-Activator>
                     </instructions>
                 </configuration>
             </plugin>

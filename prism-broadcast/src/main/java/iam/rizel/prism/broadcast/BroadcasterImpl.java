@@ -1,4 +1,4 @@
-package iam.rizel.prism.broadcaster;
+package iam.rizel.prism.broadcast;
 
 import iam.rizel.prism.Observer;
 import iam.rizel.prism.event.EventResponse;
