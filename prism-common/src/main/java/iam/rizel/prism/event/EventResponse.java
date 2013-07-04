@@ -1,6 +1,8 @@
 package iam.rizel.prism.event;
 
-public interface EventResponse {
+import java.io.Serializable;
+
+public interface EventResponse extends Serializable {
 
     public boolean isBlocking();
 

@@ -17,7 +17,7 @@ public class Activator implements BundleActivator{
         System.out.println("Testbundle start");
                 
         ServiceReference ref = bundleContext.getServiceReference(ObserverRegistrator.class.getName());
-        ObserverRegistrator registrator = bundleContext.getService(ref);
+        ObserverRegistrator registrator = (ObserverRegistrator) bundleContext.getService(ref);
         
         observer = new SayObserver();
         registrator.registerObserver(ServerEventType.SAY, observer);
@@ -27,7 +27,7 @@ public class Activator implements BundleActivator{
     public void stop(BundleContext bundleContext) throws Exception {
         System.out.println("Testbundle stop");
         ServiceReference ref = bundleContext.getServiceReference(ObserverRegistrator.class.getName());
-        ObserverRegistrator registrator = bundleContext.getService(ref);
+        ObserverRegistrator registrator = (ObserverRegistrator) bundleContext.getService(ref);
         
         registrator.unregisterObserver(ServerEventType.SAY, observer);
     }

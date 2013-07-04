@@ -1,6 +1,8 @@
 package iam.rizel.prism.event;
 
-public interface ServerEvent {
+import java.io.Serializable;
+
+public interface ServerEvent extends Serializable {
 
     public ServerEventType getType();
 

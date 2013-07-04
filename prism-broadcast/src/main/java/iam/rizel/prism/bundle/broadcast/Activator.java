@@ -21,6 +21,7 @@ public class Activator implements BundleActivator {
         
         bc.addBroadcaster(ServerEventType.SAY, sayBroadcaster);
         context.registerService(ObserverRegistrator.class.getName(), registrator, null);
+        context.registerService(BroadcasterContainer.class.getName(), registrator, null);
 	}
 
 	public void stop(BundleContext context) throws Exception {
