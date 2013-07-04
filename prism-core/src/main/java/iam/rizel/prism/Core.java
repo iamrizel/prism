@@ -2,6 +2,7 @@ package iam.rizel.prism;
 
 import org.apache.felix.framework.FrameworkFactory;
 import org.apache.felix.main.AutoProcessor;
+import org.osgi.framework.Bundle;
 import org.osgi.framework.launch.Framework;
 
 import java.util.HashMap;
@@ -14,7 +15,7 @@ public class Core {
         Map<String, String> frameworkConfig = new HashMap<String, String>();
         frameworkConfig.put("org.osgi.framework.storage.clean", "onFirstInit");
 
-        frameworkConfig.put("felix.fileinstall.dir", "testbundle");
+        //frameworkConfig.put("felix.fileinstall.dir", "testbundle");
         FrameworkFactory factory = new FrameworkFactory();
         Framework fw = factory.newFramework(frameworkConfig);
         fw.start();

@@ -1,8 +1,8 @@
 package iam.rizel.prism.broadcast;
 
-import iam.rizel.prism.Observer;
 import iam.rizel.prism.event.EventResponse;
 import iam.rizel.prism.event.ServerEvent;
+import iam.rizel.prism.observer.Observer;
 
 public interface Broadcaster {
 

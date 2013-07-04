@@ -1,8 +1,8 @@
 package iam.rizel.prism.bundle.test.observer;
 
-import iam.rizel.prism.Observer;
 import iam.rizel.prism.event.SayEvent;
 import iam.rizel.prism.event.ServerEvent;
+import iam.rizel.prism.observer.Observer;
 
 public class SayObserver implements Observer {
 

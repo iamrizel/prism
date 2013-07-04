@@ -1,8 +1,8 @@
 package iam.rizel.prism.bundle.test;
 
-import iam.rizel.prism.ObserverRegistrator;
 import iam.rizel.prism.bundle.test.observer.SayObserver;
 import iam.rizel.prism.event.ServerEventType;
+import iam.rizel.prism.observer.ObserverRegistrator;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

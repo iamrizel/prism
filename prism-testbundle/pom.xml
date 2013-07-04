@@ -33,6 +33,8 @@
                     <instructions>
                         <Bundle-SymbolicName>iam.rizel.prism.test</Bundle-SymbolicName>
                         <Bundle-Activator>iam.rizel.prism.bundle.test.Activator</Bundle-Activator>
+                    	<Export-Package>iam.rizel.prism.*</Export-Package>
+                        <Import-Package>*</Import-Package>
                     </instructions>
                 </configuration>
             </plugin>

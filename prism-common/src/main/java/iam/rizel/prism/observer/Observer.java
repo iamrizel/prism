@@ -1,4 +1,4 @@
-package iam.rizel.prism;
+package iam.rizel.prism.observer;
 
 import iam.rizel.prism.event.ServerEvent;
 

@@ -1,9 +1,9 @@
 package iam.rizel.prism.broadcast;
 
-import iam.rizel.prism.Observer;
 import iam.rizel.prism.event.EventResponse;
 import iam.rizel.prism.event.EventResponseImpl;
 import iam.rizel.prism.event.ServerEvent;
+import iam.rizel.prism.observer.Observer;
 
 import java.util.LinkedList;
 import java.util.List;

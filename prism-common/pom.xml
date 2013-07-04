@@ -24,6 +24,8 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>iam.rizel.prism.common</Bundle-SymbolicName>
+                        <Export-Package>iam.rizel.*</Export-Package>
+                        <Import-Package>*</Import-Package>
                     </instructions>
                 </configuration>
             </plugin>

@@ -1,9 +1,10 @@
-package iam.rizel.prism;
+package iam.rizel.prism.broadcast;
 
-import iam.rizel.prism.broadcast.Broadcaster;
 import iam.rizel.prism.event.EventResponse;
 import iam.rizel.prism.event.ServerEvent;
 import iam.rizel.prism.event.ServerEventType;
+import iam.rizel.prism.observer.Observer;
+import iam.rizel.prism.observer.ObserverRegistrator;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -29,7 +30,7 @@ public class BroadcasterContainerImpl implements BroadcasterContainer, ObserverR
 
 	@Override
 	public void registerObserver(ServerEventType type, Observer observer) {
-		System.out.println("Registered observer: " + type.name());
+		System.out.println("Register observer: " + type.name());
 		broadcasterMap.get(type).registerObserver(observer);		
 	}
 	

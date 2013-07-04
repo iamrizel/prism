@@ -1,6 +1,5 @@
-package iam.rizel.prism;
+package iam.rizel.prism.broadcast;
 
-import iam.rizel.prism.broadcast.Broadcaster;
 import iam.rizel.prism.event.EventResponse;
 import iam.rizel.prism.event.ServerEvent;
 import iam.rizel.prism.event.ServerEventType;
