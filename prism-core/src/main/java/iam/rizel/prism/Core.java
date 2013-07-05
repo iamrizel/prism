@@ -16,6 +16,7 @@ public class Core {
         frameworkConfig.put("org.osgi.framework.storage.clean", "onFirstInit");
 
         //frameworkConfig.put("felix.fileinstall.dir", "testbundle");
+        frameworkConfig.put("felix.fileinstall.log.level", "10");
         FrameworkFactory factory = new FrameworkFactory();
         Framework fw = factory.newFramework(frameworkConfig);
         fw.start();

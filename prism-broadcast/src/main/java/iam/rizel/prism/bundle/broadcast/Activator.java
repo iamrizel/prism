@@ -13,15 +13,7 @@ import org.osgi.framework.BundleContext;
 public class Activator implements BundleActivator {
 
 	public void start(BundleContext context) throws Exception {
-		ObserverRegistrator registrator = new BroadcasterContainerImpl();
-        BroadcasterContainer bc = (BroadcasterContainer)registrator;
-        Broadcaster sayBroadcaster = new BroadcasterImpl();
-
-        System.out.println("Register service: ObserverRegistrator");
-        
-        bc.addBroadcaster(ServerEventType.SAY, sayBroadcaster);
-        context.registerService(ObserverRegistrator.class.getName(), registrator, null);
-        context.registerService(BroadcasterContainer.class.getName(), registrator, null);
+		
 	}
 
 	public void stop(BundleContext context) throws Exception {

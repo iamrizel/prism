@@ -14,7 +14,15 @@ public class BroadcasterContainerImpl implements BroadcasterContainer, ObserverR
     private Map<ServerEventType, Broadcaster> broadcasterMap;
 
     public BroadcasterContainerImpl() {
+    	System.out.println("BroadcasterImpl Constructor");
         this.broadcasterMap = new EnumMap<ServerEventType, Broadcaster>(ServerEventType.class);
+        
+        Broadcaster sayBroadcaster = new BroadcasterImpl();
+
+        System.out.println("Register service: ObserverRegistrator");
+        
+        addBroadcaster(ServerEventType.SAY, sayBroadcaster);
+    
     }
 
     @Override
@@ -30,7 +38,7 @@ public class BroadcasterContainerImpl implements BroadcasterContainer, ObserverR
 
 	@Override
 	public void registerObserver(ServerEventType type, Observer observer) {
-		System.out.println("Register observer: " + type.name());
+		System.out.println("Map: "+broadcasterMap+"; Register observer: " + type.name() + "; Observer: " + observer);
 		broadcasterMap.get(type).registerObserver(observer);		
 	}
 	

@@ -31,7 +31,7 @@
                         <Bundle-SymbolicName>iam.rizel.prism.broadcast</Bundle-SymbolicName>
                         <Bundle-Activator>iam.rizel.prism.bundle.broadcast.Activator</Bundle-Activator>
                         <Export-Package>iam.rizel.prism.*</Export-Package>
-                        <Import-Package>*</Import-Package>
+                        <Import-Package>!org.osgi.service.blueprint,*</Import-Package>
                     </instructions>
                 </configuration>
             </plugin>
