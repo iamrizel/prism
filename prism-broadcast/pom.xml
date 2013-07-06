@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>iam.rizel</groupId>
   <artifactId>prism-broadcast</artifactId>
-  <packaging>jar</packaging>
+  <packaging>bundle</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>prism-broadcast</name>
   <url>http://maven.apache.org</url>
@@ -18,6 +18,15 @@
           <groupId>org.osgi</groupId>
           <artifactId>org.osgi.core</artifactId>
           <version>4.3.0</version>
+          <type>bundle</type>
+          <scope>provided</scope>
+    </dependency>
+      <dependency>
+          <groupId>iam.rizel</groupId>
+          <artifactId>prism-common</artifactId>
+          <version>1.0-SNAPSHOT</version>
+          <type>bundle</type>
+          <scope>provided</scope>
       </dependency>
   </dependencies>
   <build>
@@ -30,8 +39,6 @@
                     <instructions>
                         <Bundle-SymbolicName>iam.rizel.prism.broadcast</Bundle-SymbolicName>
                         <Bundle-Activator>iam.rizel.prism.bundle.broadcast.Activator</Bundle-Activator>
-                        <Export-Package>iam.rizel.prism.*</Export-Package>
-                        <Import-Package>!org.osgi.service.blueprint,*</Import-Package>
                     </instructions>
                 </configuration>
             </plugin>

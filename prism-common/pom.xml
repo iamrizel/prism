@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>iam.rizel</groupId>
   <artifactId>prism-common</artifactId>
-  <packaging>jar</packaging>
+  <packaging>bundle</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>prism-common</name>
   <url>http://maven.apache.org</url>
@@ -24,8 +24,6 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>iam.rizel.prism.common</Bundle-SymbolicName>
-                        <Export-Package>iam.rizel.*</Export-Package>
-                        <Import-Package>*</Import-Package>
                     </instructions>
                 </configuration>
             </plugin>

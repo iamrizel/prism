@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>iam.rizel</groupId>
   <artifactId>prism-testbundle</artifactId>
-  <packaging>jar</packaging>
+  <packaging>bundle</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>prism-testbundle</name>
   <url>http://maven.apache.org</url>
@@ -19,6 +19,24 @@
           <groupId>org.osgi</groupId>
           <artifactId>org.osgi.core</artifactId>
           <version>4.3.0</version>
+          <scope>provided</scope>
+          <type>bundle</type>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>org.apache.felix.log</artifactId>
+          <version>1.0.0</version>
+          <scope>provided</scope>
+          <type>bundle</type>
+      </dependency>
+
+      <dependency>
+          <groupId>iam.rizel</groupId>
+          <artifactId>prism-common</artifactId>
+          <version>1.0-SNAPSHOT</version>
+          <scope>provided</scope>
+          <type>bundle</type>
       </dependency>
 
   </dependencies>
@@ -33,8 +51,6 @@
                     <instructions>
                         <Bundle-SymbolicName>iam.rizel.prism.test</Bundle-SymbolicName>
                         <Bundle-Activator>iam.rizel.prism.bundle.test.Activator</Bundle-Activator>
-                    	<Export-Package>iam.rizel.prism.*</Export-Package>
-                        <Import-Package>!org.osgi.service.blueprint,*</Import-Package>
                     </instructions>
                 </configuration>
             </plugin>

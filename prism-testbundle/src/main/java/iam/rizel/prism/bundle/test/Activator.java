@@ -10,15 +10,13 @@ import iam.rizel.prism.observer.ObserverRegistrator;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.osgi.service.log.LogService;
 
 public class Activator implements BundleActivator{
-	
-	@Autowired
+
 	private ObserverRegistrator registrator;
 	private SayObserver observer;
-	
-	@Autowired
+
 	private TestBean tb;
 	
 	private String valami;
@@ -26,8 +24,13 @@ public class Activator implements BundleActivator{
     @Override
     public void start(BundleContext bundleContext) throws Exception {
         System.out.println("Testbundle start ");
-                
-  //      observer = new SayObserver();
+
+        ServiceReference ref = bundleContext.getServiceReference(LogService.class.getName());
+        LogService logger = (LogService) bundleContext.getService(ref);
+
+        logger.log(LogService.LOG_ERROR, "URISTENERROR+!!!!!!!!!!!!!!!!!!!!!!!");
+
+        //      observer = new SayObserver();
     //    registrator.registerObserver(ServerEventType.SAY, observer);
     }
 

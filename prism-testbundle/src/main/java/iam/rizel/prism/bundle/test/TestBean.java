@@ -1,6 +1,5 @@
 package iam.rizel.prism.bundle.test;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
 import iam.rizel.prism.bundle.test.observer.SayObserver;
 import iam.rizel.prism.event.ServerEventType;
