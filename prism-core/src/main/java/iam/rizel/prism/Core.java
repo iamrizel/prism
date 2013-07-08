@@ -2,7 +2,6 @@ package iam.rizel.prism;
 
 import org.apache.felix.framework.FrameworkFactory;
 import org.apache.felix.main.AutoProcessor;
-import org.osgi.framework.Bundle;
 import org.osgi.framework.launch.Framework;
 
 import java.util.HashMap;

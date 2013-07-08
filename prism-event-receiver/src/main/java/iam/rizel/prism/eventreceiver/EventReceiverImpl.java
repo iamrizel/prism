@@ -14,8 +14,7 @@ public class EventReceiverImpl implements EventReceiver {
 	}
 	
 	@Override
-	public EventResponse fireEvent(ServerEvent event) {
-		
+	public EventResponse fireEvent(ServerEvent event) {		
 		return container.onEvent(event);
 	}
 

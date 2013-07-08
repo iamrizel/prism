@@ -17,18 +17,14 @@ public class TestBean {
 	
 	public void setRegistrator(ObserverRegistrator registrator) {
 		this.registrator = registrator;
-		
-		System.out.println("R!!!!!!!!!!!!!!!!!!!!!!!!!!!!! SET " + registrator.toString());
 	}
 	
 	public void create() {
-		System.out.println(":::::::::::::Create");
 		observer = new SayObserver();
 	    registrator.registerObserver(ServerEventType.SAY, observer);
 	}
 	
 	public void destroy() {
-		System.out.println(":::::::::::::Destroy");
 		registrator.unregisterObserver(ServerEventType.SAY, observer);
 	}
 

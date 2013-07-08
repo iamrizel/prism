@@ -8,10 +8,6 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
-import javax.annotation.Resource;
-
-import org.osgi.framework.BundleContext;
-
 public class Init {
 	
 	private EventReceiver receiver;
@@ -29,8 +25,6 @@ public class Init {
 	}
 	
 	public void create() throws Exception {
-		System.out.println("EventReceiver started");
-		
         receiver = new EventReceiverImpl(container);
 
         rmiRegistry = LocateRegistry.createRegistry(19991);
@@ -41,7 +35,6 @@ public class Init {
 	}
 
 	public void destroy() throws Exception {
-		System.out.println("EventReceiver stopped");
 		rmiRegistry.unbind("rmi://EventReceiver");
 		UnicastRemoteObject.unexportObject(remoteReceiver, false);
 	}
