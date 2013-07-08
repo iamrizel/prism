@@ -1,0 +1,1 @@
+java -Dlogback.configurationFile=config/logback.xml -cp prism-core-1.0-SNAPSHOT.jar;lib/felix.jar iam.rizel.prism.Core
