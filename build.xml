@@ -1,0 +1,27 @@
+<project name="Prism" default="dist" basedir=".">
+	
+	<property name="dist" value="d:/Private Workspace/prism_run"/>	
+	
+	<target name="dist" depends="clean">	
+		<mkdir dir="${dist}/lib"/>	
+		<mkdir dir="${dist}/bundles"/>	
+		<mkdir dir="${dist}/log"/>
+		
+		<copy todir="${dist}/">
+			<fileset dir="prism-core/target" includes="*.jar"/>
+		</copy>
+		<copy todir="${dist}/bundles/">
+			<fileset dir="prism-broadcast/target" includes="prism*.jar"/>
+			<fileset dir="prism-common/target" includes="prism*.jar"/>
+			<fileset dir="prism-event-receiver/target" includes="prism*.jar"/>
+		</copy>
+		<copy todir="${dist}/lib/">
+			<fileset dir="prism-core/lib" includes="*.jar"/>
+		</copy>
+	</target>
+	
+	<target name="clean">
+		<delete dir="${dist}" />
+	</target>
+	
+</project>

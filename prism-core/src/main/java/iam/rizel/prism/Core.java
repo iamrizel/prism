@@ -15,7 +15,7 @@ public class Core {
         Map<String, String> frameworkConfig = new HashMap<String, String>();
         frameworkConfig.put("org.osgi.framework.storage.clean", "onFirstInit");
 
-        //frameworkConfig.put("felix.fileinstall.dir", "testbundle");
+        frameworkConfig.put("felix.fileinstall.dir", "bundles");
         frameworkConfig.put("felix.fileinstall.log.level", "10");
         FrameworkFactory factory = new FrameworkFactory();
         Framework fw = factory.newFramework(frameworkConfig);
@@ -23,7 +23,7 @@ public class Core {
                 
         Map<String, String> autoProcessorConfig = new HashMap<String, String>();
         autoProcessorConfig.put("felix.auto.deploy.action", "install,start");
-        autoProcessorConfig.put("felix.auto.deploy.dir", "bundles");
+        autoProcessorConfig.put("felix.auto.deploy.dir", "lib");
         AutoProcessor.process(autoProcessorConfig, fw.getBundleContext());
     }
 }
