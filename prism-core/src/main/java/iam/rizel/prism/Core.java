@@ -13,9 +13,10 @@ public class Core {
 
         Map<String, String> frameworkConfig = new HashMap<String, String>();
         frameworkConfig.put("org.osgi.framework.storage.clean", "onFirstInit");
+        frameworkConfig.put("org.osgi.framework.bootdelegation", "sun.*,com.sun.*");
 
         frameworkConfig.put("felix.fileinstall.dir", "bundles");
-        frameworkConfig.put("felix.fileinstall.log.level", "10");
+        frameworkConfig.put("felix.fileinstall.log.level", "100");
         FrameworkFactory factory = new FrameworkFactory();
         Framework fw = factory.newFramework(frameworkConfig);
         fw.start();
